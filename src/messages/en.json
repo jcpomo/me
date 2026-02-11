@@ -7,6 +7,7 @@
     "skills": "Skills",
     "languages": "Languages",
     "certifications": "Certifications",
+    "recommendations": "Recommendations",
     "contact": "Contact"
   },
   "hero": {
@@ -22,7 +23,15 @@
     "skills": "Skills",
     "languages": "Languages",
     "certifications": "Certifications & Courses",
+    "recommendations": "Recommendations",
     "contact": "Get In Touch"
+  },
+  "recommendations": {
+    "title": "Professional Recommendation Letter",
+    "description": "Download my official recommendation letter highlighting my professional skills, work ethic, and accomplishments.",
+    "format": "PDF Document",
+    "downloadButton": "Download Letter",
+    "note": "This recommendation letter is available in PDF format and can be viewed with any PDF reader."
   },
   "admin": {
     "dashboard": "Dashboard",

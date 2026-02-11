@@ -13,6 +13,7 @@ export default function Navbar() {
     { href: "#experience", label: t("experience") },
     { href: "#education", label: t("education") },
     { href: "#skills", label: t("skills") },
+    { href: "#recommendations", label: t("recommendations") },
     { href: "#contact", label: t("contact") },
   ];
 

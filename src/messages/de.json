@@ -7,6 +7,7 @@
     "skills": "Kenntnisse",
     "languages": "Sprachen",
     "certifications": "Zertifikate",
+    "recommendations": "Empfehlungen",
     "contact": "Kontakt"
   },
   "hero": {
@@ -22,7 +23,15 @@
     "skills": "Kenntnisse",
     "languages": "Sprachen",
     "certifications": "Zertifikate & Kurse",
+    "recommendations": "Empfehlungen",
     "contact": "Kontakt aufnehmen"
+  },
+  "recommendations": {
+    "title": "Professionelles Empfehlungsschreiben",
+    "description": "Laden Sie mein offizielles Empfehlungsschreiben herunter, das meine beruflichen Fähigkeiten, Arbeitsmoral und Erfolge hervorhebt.",
+    "format": "PDF-Dokument",
+    "downloadButton": "Brief herunterladen",
+    "note": "Dieses Empfehlungsschreiben ist im PDF-Format verfügbar und kann mit jedem PDF-Reader angezeigt werden."
   },
   "admin": {
     "dashboard": "Dashboard",

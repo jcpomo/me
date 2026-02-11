@@ -8,6 +8,7 @@ import EducationSection from "@/components/public/EducationSection";
 import SkillsSection from "@/components/public/SkillsSection";
 import LanguagesSection from "@/components/public/LanguagesSection";
 import CertificationsSection from "@/components/public/CertificationsSection";
+import RecommendationsSection from "@/components/public/RecommendationsSection";
 import ContactSection from "@/components/public/ContactSection";
 import Footer from "@/components/public/Footer";
 
@@ -48,6 +49,7 @@ export default async function CVPage() {
         <SkillsSection categories={skillCategories} locale={locale} />
         <LanguagesSection languages={languages} locale={locale} />
         <CertificationsSection certifications={certifications} locale={locale} />
+        <RecommendationsSection />
         <ContactSection profile={profile} locale={locale} />
       </main>
       <Footer />
