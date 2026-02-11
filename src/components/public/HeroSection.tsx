@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import type { Profile } from "@/generated/prisma/client";
+import type { Profile } from "@prisma/client";
 import { localized } from "@/lib/utils";
 
 interface HeroSectionProps {

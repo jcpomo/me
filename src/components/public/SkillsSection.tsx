@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import type { SkillCategory, Skill } from "@/generated/prisma/client";
+import type { SkillCategory, Skill } from "@prisma/client";
 import { localized } from "@/lib/utils";
 
 type CategoryWithSkills = SkillCategory & { skills: Skill[] };

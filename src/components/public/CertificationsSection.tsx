@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import type { Certification } from "@/generated/prisma/client";
+import type { Certification } from "@prisma/client";
 import { localized } from "@/lib/utils";
 
 interface CertificationsSectionProps {

@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import type { Language } from "@/generated/prisma/client";
+import type { Language } from "@prisma/client";
 import { localized } from "@/lib/utils";
 
 interface LanguagesSectionProps {

@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import type { Experience } from "@/generated/prisma/client";
+import type { Experience } from "@prisma/client";
 import { localized, formatDateRange } from "@/lib/utils";
 
 interface ExperienceSectionProps {

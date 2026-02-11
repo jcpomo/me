@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import type { Education } from "@/generated/prisma/client";
+import type { Education } from "@prisma/client";
 import { localized, formatDateRange } from "@/lib/utils";
 
 interface EducationSectionProps {
