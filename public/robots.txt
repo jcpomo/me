@@ -1,0 +1,23 @@
+# robots.txt para www.jcpomo.com
+# Permitir a todos los robots rastrear el sitio
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jcpomo.com/sitemap.xml
+
+# Evitar rastreo de archivos admin y API
+Disallow: /admin
+Disallow: /api/
+Disallow: /login
+
+# Optimización para rastreadores comunes
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /

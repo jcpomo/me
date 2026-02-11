@@ -12,6 +12,58 @@ import RecommendationsSection from "@/components/public/RecommendationsSection";
 import ContactSection from "@/components/public/ContactSection";
 import Footer from "@/components/public/Footer";
 
+// Datos estructurados JSON-LD para SEO
+function getStructuredData(profile: any, locale: string) {
+  const isGerman = locale === "de";
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "José Carlos Pomo González",
+    alternateName: ["José Carlos Pomo", "Pomo González", "JCP"],
+    jobTitle: isGerman ? "Full Stack Webentwickler" : "Full Stack Web Developer",
+    description: isGerman
+      ? profile.summaryDe
+      : profile.summaryEn,
+    url: "https://www.jcpomo.com",
+    image: "https://www.jcpomo.com/images/profile.png",
+    email: profile.email,
+    telephone: profile.phone,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "München",
+      addressRegion: "Bayern",
+      addressCountry: "DE",
+    },
+    sameAs: [
+      profile.linkedinUrl,
+      profile.githubUrl,
+      profile.websiteUrl,
+    ].filter(Boolean),
+    knowsAbout: [
+      "PHP",
+      "Laravel",
+      "React",
+      "Angular",
+      "Vue.js",
+      "JavaScript",
+      "TypeScript",
+      "Docker",
+      "MySQL",
+      "Web Development",
+      "Full Stack Development",
+      "RESTful APIs",
+      "WordPress",
+      "DevOps",
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "DFGE",
+      url: "https://dfge.de",
+    },
+  };
+}
+
 export default async function CVPage() {
   const locale = await getLocale();
 
@@ -38,8 +90,16 @@ export default async function CVPage() {
     );
   }
 
+  const structuredData = getStructuredData(profile, locale);
+
   return (
     <>
+      {/* Datos estructurados para SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <Navbar />
       <main>
         <HeroSection profile={profile} locale={locale} />
