@@ -1,0 +1,161 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Auth.js required models ────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String
+  accounts      Account[]
+  sessions      Session[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ─── CV Data Models ─────────────────────────────────────
+
+model Profile {
+  id          String   @id @default(cuid())
+  firstName   String
+  lastName    String
+  titleEn     String
+  titleDe     String
+  email       String
+  phone       String
+  location    String
+  summaryEn   String   @db.Text
+  summaryDe   String   @db.Text
+  photoUrl    String?
+  linkedinUrl String?
+  githubUrl   String?
+  websiteUrl  String?
+  updatedAt   DateTime @updatedAt
+}
+
+model Experience {
+  id            String    @id @default(cuid())
+  companyName   String
+  positionEn    String
+  positionDe    String
+  locationEn    String
+  locationDe    String
+  startDate     DateTime
+  endDate       DateTime?
+  isCurrent     Boolean   @default(false)
+  descriptionEn String    @db.Text
+  descriptionDe String    @db.Text
+  sortOrder     Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Education {
+  id             String    @id @default(cuid())
+  institutionEn  String
+  institutionDe  String
+  degreeEn       String
+  degreeDe       String
+  fieldOfStudyEn String
+  fieldOfStudyDe String
+  locationEn     String
+  locationDe     String
+  startDate      DateTime
+  endDate        DateTime?
+  descriptionEn  String?   @db.Text
+  descriptionDe  String?   @db.Text
+  sortOrder      Int       @default(0)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model SkillCategory {
+  id        String   @id @default(cuid())
+  nameEn    String
+  nameDe    String
+  sortOrder Int      @default(0)
+  skills    Skill[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id          String        @id @default(cuid())
+  name        String
+  proficiency Int?          @default(0)
+  categoryId  String
+  category    SkillCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  sortOrder   Int           @default(0)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Language {
+  id        String   @id @default(cuid())
+  nameEn    String
+  nameDe    String
+  levelEn   String
+  levelDe   String
+  cefrLevel String?
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Certification {
+  id             String    @id @default(cuid())
+  nameEn         String
+  nameDe         String
+  issuer         String?
+  issueDate      DateTime?
+  credentialUrl  String?
+  descriptionEn  String?   @db.Text
+  descriptionDe  String?   @db.Text
+  sortOrder      Int       @default(0)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}

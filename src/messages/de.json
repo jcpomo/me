@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "skills": "Kenntnisse",
+    "languages": "Sprachen",
+    "certifications": "Zertifikate",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "subtitle": "Moderne Weberfahrungen schaffen",
+    "contactMe": "Kontakt",
+    "downloadCv": "Lebenslauf herunterladen"
+  },
+  "sections": {
+    "about": "Über mich",
+    "experience": "Berufserfahrung",
+    "education": "Ausbildung",
+    "skills": "Kenntnisse",
+    "languages": "Sprachen",
+    "certifications": "Zertifikate & Kurse",
+    "contact": "Kontakt aufnehmen"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "profile": "Profil",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "skills": "Kenntnisse",
+    "languages": "Sprachen",
+    "certifications": "Zertifikate",
+    "photo": "Foto",
+    "save": "Änderungen speichern",
+    "delete": "Löschen",
+    "add": "Neu hinzufügen",
+    "edit": "Bearbeiten",
+    "cancel": "Abbrechen",
+    "confirmDelete": "Möchten Sie dieses Element wirklich löschen?",
+    "saved": "Änderungen erfolgreich gespeichert",
+    "logout": "Abmelden",
+    "backToSite": "Zurück zur Seite"
+  },
+  "login": {
+    "title": "Admin-Anmeldung",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "submit": "Anmelden",
+    "error": "Ungültige Anmeldedaten"
+  },
+  "common": {
+    "present": "Heute",
+    "to": "bis",
+    "loading": "Wird geladen..."
+  }
+}

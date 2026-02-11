@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "subtitle": "Building modern web experiences",
+    "contactMe": "Contact Me",
+    "downloadCv": "Download CV"
+  },
+  "sections": {
+    "about": "About Me",
+    "experience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "certifications": "Certifications & Courses",
+    "contact": "Get In Touch"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "certifications": "Certifications",
+    "photo": "Photo",
+    "save": "Save Changes",
+    "delete": "Delete",
+    "add": "Add New",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "saved": "Changes saved successfully",
+    "logout": "Log Out",
+    "backToSite": "Back to Site"
+  },
+  "login": {
+    "title": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign In",
+    "error": "Invalid credentials"
+  },
+  "common": {
+    "present": "Present",
+    "to": "to",
+    "loading": "Loading..."
+  }
+}
